@@ -3,8 +3,11 @@
 \usepackage[danish]{babel}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage{amsmath}
+\usepackage{multicol}
 
-\title{Hjemmeopgave01}
+\title{\huge{Hjemmeopgave01} \\[0,75cm] \textsc{\Large{Kursus 02101 \\ Indledende Programmering \\}}}
+
 \author{
 	\begin{tabular}{l r}
 		Lukas Villumsen & (s144451)\\
@@ -13,10 +16,12 @@
 }
 
 \begin{document}
-\maketitle
+\clearpage\maketitle\setcounter{page}{0}
+\thispagestyle{empty}
+\tableofcontents
 
 \include{Password}
-%\include{NextPrime}
+\include{NextPrime}
 \include{AccessControl}
-%\include{Particles}
+\include{Particles}
 \end{document}

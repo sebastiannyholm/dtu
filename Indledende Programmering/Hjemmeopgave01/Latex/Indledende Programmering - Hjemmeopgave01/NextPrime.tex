@@ -1,0 +1,20 @@
+\section{Opgave 1.2 - NextPrime}
+
+Idéen bag programmet er en simpel generering af primtalsrækken med den enkelte forskel, at der ikke køres igennem alle positive integers. Den givne \textit{integer} (heltal) $n$ udgør således begyndelsesværdien for primtalsgenereringen, hvorefter det først fundne primtal printes til konsollen som svar. Primtalsalgoritmen brugt, I dette tilfælde, går ud på først at: 
+
+\begin{itemize}
+	\item Ignorere alle multiplum af 2 - Der findes ingen lige primtal støre end 2.
+	\item Hvis $n<2$, så er det første primtal efter $n$ lig 2. 
+	\begin{itemize}
+		\item Primtal er kun defineret for \textbf{positive} heltal.
+	\end{itemize}
+	\item Kun heltallet $n=2$ vil kunne resultere i udskrivningen af primtallet 3.
+\end{itemize}
+
+\noindent Den mere bærende del af algoritmen, og dermed programmet, består i at teste for divisorere $d<\sqrt{n}$. Grundet den måde faktorere af $n$ gentages efter $\sqrt{n}*\sqrt{n}$, er der ingen grund til at iterere yderligere end til dette punkt ($d<\sqrt{n}$). Dette kommer af at multiplikation er \emph{kommutativt}:
+
+\begin{equation*}
+	36 = 18*2 = 12*3 9*4 = \sqrt{36}*\sqrt{36} = 4*9 = 3*12 = 2*18 = 36
+\end{equation*}
+
+\noindent Vi tester altså $n$ for alle \textit{ulige} divisorere $d<\sqrt{n}$, hvis ingen findes er $n$ et primtal.\footnote{Se bilag - Kildekode: NextPrime.java}

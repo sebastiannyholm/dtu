@@ -2,14 +2,16 @@
 
 Dette program skulle laves med egen main metode, da den kan gribes an på mange måder. Vi valgte at lave en metode for hver enkelt del af systemet. Vi endte derved op med følgende metoder: 
 
+\begin{multicols}{2}
 \begin{itemize}
-    \item main()
-    \item signIn()
-    \item logIn()
-    \item online()
-    \item changePassword()
-    \item logOff()
-    \item shutDown()
+	\item main()
+	\item signIn()
+	\item logIn()
+	\item online()
+	\item changePassword()
+	\item logOff()
+	\item shutDown()
 \end{itemize}
+\end{multicols}
 
-Det første der sker når man åbner programmet er at man fra mainmetoden bliver sendt over i signIn() metoden, hvor man bliver bedt om at lave en bruger. Når man har lavet en korrekt bruger bliver man sendt videre til logIn(). Her kan man logge ind, hvis man skriver de rigtige oplysninger og ellers bliver man bedt om at indtaste dem igen. Hvis det er korrekt, bliver man sendt videre til online() metoden, hvor man kan vælge de tre muligheder. Alt efter hvad man vælger, bliver man sendt videre til den tilhørende metode. Hvis man vælger at ændre password, bliver man sendt videre til changePassword(), hvor man har mulighed for at ændre passwordet. Hvis man indtaster noget korrekt, bliver man sendt tilbage til online() metoden. Hvis man vælger log ud, bliver man sendt til logOff(), som sender en videre til logIn(). Her kunne man godt have udeladt logOff() metoden, men i tilfælde af en videre udviklen, valgte vi at lave den. Hvis man vælger at lukke systemet, bliver man sendt til shutDown(), som lukker ned for systemet. Her kunne man også gøre som før og slukke systemet direkte i online() metoden, men af samme grund som før, valgte vi at lave metoden for sig selv.
+\noindent Det første der sker når man åbner programmet er at man fra mainmetoden bliver sendt over i signIn() metoden, hvor man bliver bedt om at lave en bruger. Når man har lavet en korrekt bruger bliver man sendt videre til logIn(). Her kan man logge ind, hvis man skriver de rigtige oplysninger og ellers bliver man bedt om at indtaste dem igen. Hvis det er korrekt, bliver man sendt videre til online() metoden, hvor man kan vælge de tre muligheder. Alt efter hvad man vælger, bliver man sendt videre til den tilhørende metode. Hvis man vælger at ændre password, bliver man sendt videre til changePassword(), hvor man har mulighed for at ændre passwordet. Hvis man indtaster noget korrekt, bliver man sendt tilbage til online() metoden. Hvis man vælger log ud, bliver man sendt til logOff(), som sender en videre til logIn(). Her kunne man godt have udeladt logOff() metoden, men i tilfælde af en videre udviklen, valgte vi at lave den. Hvis man vælger at lukke systemet, bliver man sendt til shutDown(), som lukker ned for systemet. Her kunne man også gøre som før og slukke systemet direkte i online() metoden, men af samme grund som før, valgte vi at lave metoden for sig selv.\footnote{Se bilag - Kildekode: AccessControl.java}

@@ -1,0 +1,26 @@
+\section{Opgave 1.4 - Particles}
+
+\subsection*{a)}
+I denne opgave benyttes objektvariablen \emph{Point} med henblik på at overskueliggøre koordinatsættet
+$(x_n, y_n)$ for partiklen $P_n$.\\	
+Der gøres brug af den importerede metode \texttt{Random()}, hentet fra java's utility pakke, til hhv. initialiseringen af de tre partikler,
+$P_1, P_2, P_3$, samt ved den tilfældige forøgelse (eng. \emph{increment}) i hvert af partiklernes
+koordinater. Selve den 'aktive' del af programkoden eksekveres inden for et \texttt{for loop}, hvor
+metoderne:
+
+\begin{itemize}
+	\item \texttt{Point.getX()}
+	\item \texttt{Point.getY()}	\item \texttt{Point.setLocation()}
+\end{itemize}
+
+anvendes til bestemmmelsen af partiklernes nye position på det ikke-synlige $n \times n$ grid. Loopet
+itereres $t$ gange hvorved $P_n\texttt{.getX()}$ såvel som $P_n\texttt{.getY()}$ bliver inkrementeret med
+hvert sit særskilte tilfældige heltal i intervallet $[-s, s]$ for hver iteration.\footnote{Se bilag - Kildekode: Particles.java}
+
+\subsection*{b)}
+Følger foregående opgave, dog med få justeringer:
+\begin{itemize}
+	\item Fjernet én af partiklerne, $P_3$.
+	\item Tilføjet et \textit{nested} \texttt{for loop}
+\end{itemize}
+\noindent Når de to resterende partikler ved tilfældig inkrementering opnår ens koordinatsæt vil det nye loop træde i kraft. Det nye loop kører videre på det oprindelige \texttt{for loop}, med samme iterationsbetingelser, og derved terminerer begge loop efter endt udførelse på det \textit{nested} \texttt{for loop}.\footnote{Se bilag - Kildekode: ParticlesWithCollide.java}
